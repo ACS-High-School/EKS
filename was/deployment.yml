@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: sw801733/backend:21
+        image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:48
         ports:
         - containerPort: 8080
