@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: react-app-config
+data:
+  REACT_APP_BASE_URL: "https://www.sv.bthreeo.com"
+  REACT_APP_COOKIE_DOMAIN: ".bthreeo.com"

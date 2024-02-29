@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-react-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-react-app
+  template:
+    metadata:
+      labels:
+        app: nginx-react-app
+    spec:
+      containers:
+      - name: nginx-react-app
+        image: sw801733/frontend:22
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+        envFrom:
+          - configMapRef:
+              name: react-app-config
+
