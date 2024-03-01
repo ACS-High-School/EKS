@@ -7,8 +7,6 @@ metadata:
     kubernetes.io/ingress.class: "alb"
     alb.ingress.kubernetes.io/security-groups: "sg-0ba26280d18f534c8"
     alb.ingress.kubernetes.io/scheme: "internet-facing"
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/backend-protocol: HTTPS
     # ACM 인증서 ARN을 지정
     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:853963783084:certificate/2dc9e57b-7264-4797-a6f2-dd891c956766"
     # HTTPS 리디렉션 설정
