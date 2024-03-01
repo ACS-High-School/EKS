@@ -14,7 +14,7 @@ metadata:
     # 기타 필요한 ALB 어노테이션들...
 spec:
   rules:
-  - host: "bthreeo.com"
+  - host: "sv.bthreeo.com"
     http:
       paths:
       - path: /
