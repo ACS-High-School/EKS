@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx-react-app
-        image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/frontend:95
+        image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/frontend:96
         ports:
         - containerPort: 80
         resources:
