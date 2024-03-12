@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:73
+        image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:75
         ports:
         - containerPort: 8080
     nodeSelector:  # 노드 셀렉터를 추가합니다.
