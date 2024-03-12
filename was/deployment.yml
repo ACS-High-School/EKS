@@ -17,3 +17,5 @@ spec:
         image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:73
         ports:
         - containerPort: 8080
+    nodeSelector:  # 노드 셀렉터를 추가합니다.
+      nodegroup: b3o-tools-ng-2024022319355450230000000a
