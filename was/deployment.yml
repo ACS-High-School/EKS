@@ -18,4 +18,4 @@ spec:
         ports:
         - containerPort: 8080
     nodeSelector:  # 노드 셀렉터를 추가합니다.
-      nodegroup: b3o-tools-ng-2024022319355450230000000a
+      nodegroup: b3o-worker-ng-2024022319355450230000000c
