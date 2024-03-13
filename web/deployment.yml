@@ -12,7 +12,6 @@ spec:
       labels:
         app: nginx-react-app
     spec:
-      serviceAccountName: s3-access-sa-web
       containers:
       - name: nginx-react-app
         image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/frontend:110
