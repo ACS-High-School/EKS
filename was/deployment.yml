@@ -12,7 +12,6 @@ spec:
       labels:
         app: springboot-app
     spec:
-      serviceAccountName: s3-access-sa
       containers:
       - name: springboot-app
         image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:76
