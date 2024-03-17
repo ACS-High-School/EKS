@@ -18,6 +18,7 @@ spec:
         image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/frontend:116
         ports:
         - containerPort: 80
+      provision: karpenter
         resources:
           limits:
             cpu: 500m
