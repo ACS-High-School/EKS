@@ -17,7 +17,6 @@ spec:
         image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:81
         ports:
         - containerPort: 8080
-      provision: karpenter
         resources:
           requests:
             cpu: "100m" # CPU 요청량을 추가합니다.
