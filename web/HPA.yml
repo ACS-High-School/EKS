@@ -5,10 +5,10 @@ metadata:
   namespace: web
 spec:
   scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: nginx-react-app-deployment
-  minReplicas: 1
+    apiVersion: argoproj.io/v1alpha1
+    kind: Rollout
+    name: nginx-react-app-rollout
+  minReplicas: 2
   maxReplicas: 10
   metrics:
   - type: Resource
