@@ -4,7 +4,6 @@ metadata:
   name: springboot-app-rollout
 spec:
   replicas: 2
-  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: springboot-app
@@ -23,12 +22,7 @@ spec:
             cpu: 500m
           requests:
             cpu: 200m
-  strategy:
-    canary:
-      maxSurge: "25%"
-      maxUnavailable: 0
-      steps:
-      - setWeight: 25
-      - pause: {duration: 10s}
-      - setWeight: 50
-      - pause: {duration: 10s}
+ strategy:
+    blueGreen: 
+      activeService: springboot-app-service
+      autoPromotionEnabled: false
