@@ -1,9 +1,10 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
-  name: springboot-app-deployment
+  name: springboot-app-rollout
 spec:
-  replicas: 1
+  replicas: 2
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: springboot-app
@@ -22,3 +23,12 @@ spec:
             cpu: 500m
           requests:
             cpu: 200m
+  strategy:
+    canary:
+      maxSurge: "25%"
+      maxUnavailable: 0
+      steps:
+      - setWeight: 25
+      - pause: {duration: 10s}
+      - setWeight: 50
+      - pause: {duration: 10s}
