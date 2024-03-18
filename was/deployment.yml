@@ -4,6 +4,7 @@ metadata:
   name: springboot-app-rollout
 spec:
   replicas: 2
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: springboot-app
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:85
+        image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:83
         ports:
         - containerPort: 8080
         resources:
@@ -23,6 +24,11 @@ spec:
           requests:
             cpu: 200m
   strategy:
-    blueGreen: 
-      activeService: springboot-app-service
-      autoPromotionEnabled: true
+    canary:
+      maxSurge: "25%"
+      maxUnavailable: 0
+      steps:
+      - setWeight: 25
+      - pause: {duration: 10s}
+      - setWeight: 50
+      - pause: {duration: 10s}
