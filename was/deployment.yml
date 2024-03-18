@@ -1,7 +1,7 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: springboot-app-rollout
+  name: springboot-app-deployment
 spec:
   replicas: 1
   selector:
@@ -22,10 +22,3 @@ spec:
             cpu: 500m
           requests:
             cpu: 200m
-  strategy:
-    type: BlueGreen
-    blueGreen: 
-      activeService: springboot-app-service
-      previewService: springboot-app-preview-service
-      autoPromotionEnabled: true
-
