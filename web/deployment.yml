@@ -1,7 +1,7 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Rollout
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: nginx-react-app-rollout
+  name: nginx-react-app-deployment
 spec:
   replicas: 2
   revisionHistoryLimit: 2
@@ -24,13 +24,3 @@ spec:
             cpu: 500m
           requests:
             cpu: 200m
-  strategy:
-    canary:
-      maxSurge: "25%"
-      maxUnavailable: 0
-      steps:
-      - setWeight: 25
-      - pause: {duration: 10s}
-      - setWeight: 50
-      - pause: {duration: 10s}
-
