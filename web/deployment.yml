@@ -4,7 +4,6 @@ metadata:
   name: nginx-react-app-deployment
 spec:
   replicas: 2
-  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: nginx-react-app
