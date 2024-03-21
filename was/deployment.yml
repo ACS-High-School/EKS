@@ -22,5 +22,10 @@ spec:
             cpu: 500m
           requests:
             cpu: 200m
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sleep", "60"]
+      terminationGracePeriodSeconds: 70
       readinessGates:
         - conditionType: target-health.alb.ingress.k8s.aws/springboot-app-ingress_springboot-app-service_8080
