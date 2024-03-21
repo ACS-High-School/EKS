@@ -11,6 +11,7 @@ metadata:
     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:853963783084:certificate/2dc9e57b-7264-4797-a6f2-dd891c956766"
     # HTTPS 리디렉션 설정
     alb.ingress.kubernetes.io/ssl-redirect: "443"
+    alb.ingress.kubernetes.io/target-type: "instance"
     # 기타 필요한 ALB 어노테이션들...
 spec:
   rules:
