@@ -24,4 +24,4 @@ spec:
           requests:
             cpu: 200m
       readinessGates:
-      - conditionType: target-health.alb.ingress.k8s.aws/nginx-react-app-ingress_api-nodeport_80
+      - conditionType: target-health.alb.ingress.k8s.aws/nginx-react-app-ingress_nginx-react-app-service_80
