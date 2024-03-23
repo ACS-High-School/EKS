@@ -30,15 +30,15 @@ spec:
           httpGet:
             path: /
             port: 8080
-          periodSeconds: 4
-          timeoutSeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 20
           failureThreshold: 3
         readinessProbe:
           httpGet:
             path: /
             port: 8080
             scheme: HTTP
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
           periodSeconds: 10
       readinessGates:
       - conditionType: target-health.alb.ingress.k8s.aws/springboot-app-ingress_springboot-app-service_8080
