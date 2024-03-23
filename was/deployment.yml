@@ -32,7 +32,7 @@ spec:
             port: 8080
           periodSeconds: 10
           timeoutSeconds: 20
-          failureThreshold: 3
+          failureThreshold: 5
         readinessProbe:
           httpGet:
             path: /
