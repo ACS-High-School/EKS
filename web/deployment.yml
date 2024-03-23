@@ -23,5 +23,10 @@ spec:
             cpu: 500m
           requests:
             cpu: 200m
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/bash", "-c", "sleep 40"]
       readinessGates:
       - conditionType: target-health.alb.ingress.k8s.aws/nginx-react-app-ingress_nginx-react-app-service_80
+      terminationGracePeriodSeconds: 60
