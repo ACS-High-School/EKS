@@ -42,7 +42,6 @@ spec:
             scheme: HTTP
           initialDelaySeconds: 60
           periodSeconds: 10
-      provision: karpenter
       readinessGates:
       - conditionType: target-health.alb.ingress.k8s.aws/springboot-app-ingress_springboot-app-service_8080
       terminationGracePeriodSeconds: 60
