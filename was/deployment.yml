@@ -12,15 +12,6 @@ spec:
       labels:
         app: springboot-app
     spec:
-      affinity:
-          nodeAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-              nodeSelectorTerms:
-              - matchExpressions:
-                - key: "karpenter.sh/provisioner-name"
-                  operator: "In"
-                  values:
-                  - "b3o-tools-ng-20240313111727172700000016"
       containers:
       - name: springboot-app
         image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:100
@@ -51,6 +42,7 @@ spec:
             scheme: HTTP
           initialDelaySeconds: 60
           periodSeconds: 10
+      provision: karpenter
       readinessGates:
       - conditionType: target-health.alb.ingress.k8s.aws/springboot-app-ingress_springboot-app-service_8080
       terminationGracePeriodSeconds: 60
