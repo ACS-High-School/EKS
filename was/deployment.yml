@@ -17,6 +17,13 @@ spec:
         image: 853963783084.dkr.ecr.ap-northeast-2.amazonaws.com/backend:100
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 300m
+            memory: 512Mi
         lifecycle:
           preStop:
             exec:
