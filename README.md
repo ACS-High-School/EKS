@@ -7,7 +7,8 @@
 <br>
 
 ## Architecture
-<img width="1604" alt="image" src="https://github.com/ACS-High-School/Eks/assets/94664341/63e6ba5b-7ddd-4a8d-8813-a08f6046943a">
+<img width="1351" alt="image" src="https://github.com/ACS-High-School/EKS/assets/94664341/c74cdc8e-afeb-428b-a589-7ae4d9a9a98b">
+
 
 <br>
 
